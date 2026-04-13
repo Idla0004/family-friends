@@ -23,7 +23,7 @@ const SingleView = () => {
             alt="beautiful dog"
             width={32}
             height={32}
-            className="rounded-lg"
+            className="rounded-lg aspect-square"
           />
           <p className="text-[#FFFF] leading-none text-xs ml-2">
             Breed name
@@ -35,7 +35,7 @@ const SingleView = () => {
           alt="beautiful dog"
           width={339}
           height={360}
-          className="rounded-2xl w-screen"
+          className="rounded-2xl w-screen aspect-square object-cover"
         />
       </div>
       <div className="my-3">
