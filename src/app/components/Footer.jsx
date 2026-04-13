@@ -5,8 +5,8 @@ import { FiUser } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="">
-      <ul className="flex gap-18 justify-center bg-[#ffffff33] backdrop-blur-xl">
+    <footer className="fixed bottom-0 left-0 w-full backdrop-blur-xl p-2 pb-6 bg-[#ffffff33] rounded-t-4xl">
+      <ul className="flex gap-18 justify-center py-2">
         <li>
           <BiHomeAlt size={25} color="#ACACAC" />
         </li>
