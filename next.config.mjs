@@ -10,6 +10,13 @@ const nextConfig = {
         pathname: "/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "cdn2.thedogapi.com",
+        port: "",
+        pathname: "/**",
+        search: "",
+      },
     ],
   },
 };

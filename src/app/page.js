@@ -1,25 +1,31 @@
 import Image from "next/image";
-import { LiaSearchSolid } from "react-icons/lia";
+import SearchBar from "./components/SearchBar";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
-        <section className="">
-          <div className="flex justify-between p-4">
-            <LiaSearchSolid
-              color="white"
-              size={45}
-              className=" bg-[#F2968F] items-start p-2 rounded-full"
+    <div>
+      <section className="grid grid-cols-[repeat(auto-fill.minmax(250px,1fr))] gap-4">
+        <SearchBar />
+        <section className="flex flex-wrap justify-center gap-1">
+          <div>
+            <Image
+              src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg"
+              alt="beautiful dog"
+              width={160}
+              height={114}
             />
-            <input
-              type="search"
-              className="border text-[#CACACD] rounded-full px-3 py-2"
-              placeholder="Search breeds"
-            ></input>
+            <div />
+            <div>
+              <Image
+                src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg"
+                alt="beautiful dog"
+                width={160}
+                height={114}
+              />
+            </div>
           </div>
         </section>
-      </main>
+      </section>
     </div>
   );
 }
