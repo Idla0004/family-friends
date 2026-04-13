@@ -2,7 +2,7 @@ import { LiaSearchSolid } from "react-icons/lia";
 
 const SearchBar = () => {
   return (
-    <div className="flex justify-between p-4 items-center">
+    <div className="flex justify-between items-center">
       <LiaSearchSolid
         color="white"
         size={45}
