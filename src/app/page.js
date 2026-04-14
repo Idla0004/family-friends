@@ -11,7 +11,6 @@ export default function Home() {
       <section className="flex flex-wrap justify-center gap-7">
         <BreedList />
       </section>
-      <SingleView />
     </section>
   );
 }
