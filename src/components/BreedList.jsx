@@ -1,5 +1,4 @@
 import DogBreed from "./DogBreed";
-import Link from "next/link";
 
 const BreedList = () => {
   return (
@@ -11,33 +10,32 @@ const BreedList = () => {
 
 const FetchBreed = async () => {
   "use server";
-  const response = await fetch(
-    "https://api.thedogapi.com/v1/breeds",
-    {
-      headers: {
-        "x-api-key": process.env.API_KEY,
+  try {
+    const response = await fetch(
+      "https://api.thedogapi.com/v1/breeds",
+      {
+        headers: {
+          "x-api-key": process.env.API_KEY,
+        },
       },
-    },
-  );
-  const breeds = await response.json();
+    );
+    const breeds = await response.json();
 
-  return breeds.map((breed) => {
-    return (
-      <div key={breed.id} className="relative">
-        <Link
-          key={breed.id}
-          href={`/detailview/${breed.id}`}
-        >
+    return breeds.map((breed) => {
+      return (
+        <div key={breed.id} className="relative">
           <DogBreed
-            key={breed.id}
+            id={breed.id}
             breedGroup={breed.breed_group}
             origin={breed.origin}
             imgsrc={breed.image.url}
           />
-        </Link>
-      </div>
-    );
-  });
+        </div>
+      );
+    });
+  } catch (error) {
+    return <p>Whoops! An error has occured!</p>;
+  }
 };
 
 export default BreedList;
