@@ -1,8 +1,9 @@
 import DogBreed from "./DogBreed";
+import Link from "next/link";
 
 const BreedList = () => {
   return (
-    <div className="grid grid-cols-2 justify-center">
+    <div className="grid grid-cols-2 justify-center gap-x-7 gap-y-2">
       <FetchBreed />
     </div>
   );
@@ -22,12 +23,19 @@ const FetchBreed = async () => {
 
   return breeds.map((breed) => {
     return (
-      <DogBreed
-        key={breed.id}
-        breedGroup={breed.breed_group}
-        origin={breed.origin}
-        imgsrc={breed.image.url}
-      />
+      <div key={breed.id} className="relative">
+        <Link
+          key={breed.id}
+          href={`/detailview/${breed.id}`}
+        >
+          <DogBreed
+            key={breed.id}
+            breedGroup={breed.breed_group}
+            origin={breed.origin}
+            imgsrc={breed.image.url}
+          />
+        </Link>
+      </div>
     );
   });
 };

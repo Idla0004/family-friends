@@ -7,7 +7,7 @@ const DogBreed = ({
   imgsrc,
 }) => {
   return (
-    <div className="bg-white shadow-sm rounded-2xl mb-3 w-fit">
+    <div className="bg-white shadow-sm rounded-2xl mb-3 w-fit pb-1">
       <div className="relative">
         <CiStar
           color="white"
