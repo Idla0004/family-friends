@@ -23,17 +23,15 @@ const FetchBreed = async ({ searchParams }) => {
     const breeds = await response.json();
 
     return breeds.map((breed) => {
-      return (
-        <div key={breed.id} className="relative">
-          <DogBreed
-            id={breed.id}
-            breedGroup={breed.breed_group}
-            origin={breed.origin}
-            imgsrc={breed.image.url}
-            breedName={breed.name}
-          />
-        </div>
-      );
+      <div key={breed.id} className="relative">
+        <DogBreed
+          id={breed.id}
+          breedGroup={breed.breed_group}
+          origin={breed.origin}
+          imgsrc={breed.image.url}
+          breedName={breed.name}
+        />
+      </div>;
     });
   } catch (error) {
     return <p>Whoops! An error has occured!</p>;
