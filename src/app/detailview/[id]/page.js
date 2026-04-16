@@ -27,7 +27,10 @@ const DetailView = async ({ params }) => {
             className=" bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full absolute left-0"
           />
         </Link>
-        <FavoriteElement />
+        <FavoriteElement
+          id={breed.id}
+          breed={breed.name}
+        />
 
         <div className="absolute left-0 bottom-0 bg-[rgba(255,255,255,0.2)] flex p-3 rounded-xl backdrop-blur-xl m-3">
           <Image

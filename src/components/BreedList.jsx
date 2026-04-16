@@ -30,6 +30,7 @@ const FetchBreed = async ({ searchParams }) => {
             breedGroup={breed.breed_group}
             origin={breed.origin}
             imgsrc={breed.image.url}
+            breedName={breed.name}
           />
         </div>
       );

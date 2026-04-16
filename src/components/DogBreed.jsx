@@ -7,11 +7,15 @@ const DogBreed = ({
   breedGroup,
   origin,
   imgsrc,
+  breedName,
 }) => {
   return (
     <div className="bg-white shadow-sm rounded-2xl mb-3 w-fit pb-1">
       <div className="relative">
-        <FavoriteElement />
+        <FavoriteElement
+          id={id}
+          breedName={breedName.name}
+        />
       </div>
       <Link href={`/detailview/${id}`}>
         <Image
