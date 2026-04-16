@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { CiStar } from "react-icons/ci";
 import Link from "next/link";
+import FavoriteElement from "./FavoriteElement";
 
 const DogBreed = ({
   id,
@@ -11,11 +11,7 @@ const DogBreed = ({
   return (
     <div className="bg-white shadow-sm rounded-2xl mb-3 w-fit pb-1">
       <div className="relative">
-        <CiStar
-          color="white"
-          size={24}
-          className=" bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full absolute right-0"
-        />
+        <FavoriteElement />
       </div>
       <Link href={`/detailview/${id}`}>
         <Image

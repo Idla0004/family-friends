@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CiStar } from "react-icons/ci";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
+import FavoriteElement from "@/components/FavoriteElement";
 
 const DetailView = async ({ params }) => {
   const { id } = await params;
@@ -26,11 +27,7 @@ const DetailView = async ({ params }) => {
             className=" bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full absolute left-0"
           />
         </Link>
-        <CiStar
-          color="white"
-          size={24}
-          className=" bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full absolute right-0"
-        />
+        <FavoriteElement />
 
         <div className="absolute left-0 bottom-0 bg-[rgba(255,255,255,0.2)] flex p-3 rounded-xl backdrop-blur-xl m-3">
           <Image
