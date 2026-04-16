@@ -17,7 +17,7 @@ const FavoriteElement = ({ id, breed }) => {
     return (
       <FaStar
         size={24}
-        className="cursor-pointer absolute top-0 right-0 text-white  bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full"
+        className="cursor-pointer absolute top-0 right-0 text-white  bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full "
         onClick={() => {
           removeFavorite(id);
         }}

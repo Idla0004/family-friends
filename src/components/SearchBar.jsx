@@ -7,7 +7,7 @@ const SearchBar = () => {
         <LiaSearchSolid
           color="white"
           size={45}
-          className=" bg-[#F2968F] items-start p-2 rounded-full"
+          className=" bg-[#F2968F] items-start p-2 rounded-full cursor-pointer"
         />
       </button>
       <input

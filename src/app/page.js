@@ -1,7 +1,4 @@
-import Image from "next/image";
 import SearchBar from "../components/SearchBar";
-import DogBreed from "../components/DogBreed";
-import SingleView from "./singleview";
 import BreedList from "../components/BreedList";
 import { Suspense } from "react";
 

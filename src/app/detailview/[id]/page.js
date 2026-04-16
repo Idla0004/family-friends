@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { CiStar } from "react-icons/ci";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import FavoriteElement from "@/components/FavoriteElement";
+import Temperement from "@/components/Temperement";
 
 const DetailView = async ({ params }) => {
   const { id } = await params;
@@ -13,18 +13,18 @@ const DetailView = async ({ params }) => {
       headers: {
         "x-api-key": process.env.API_KEY,
       },
+      cache: "no-store",
     },
   );
   const breed = await response.json();
 
   return (
     <div className="bg-white mb-3">
-      <div className="relative flex justify-center">
+      <div className="relative flex">
         <Link href={`/`}>
           <IoIosArrowBack
-            color="white"
             size={24}
-            className=" bg-[#fefefe3f] items-center m-2 p-0.5 rounded-full absolute left-0"
+            className=" bg-[#F8F8F8] items-center m-2 p-0.5 rounded-full absolute left-0 text-[#242424]"
           />
         </Link>
         <FavoriteElement
@@ -58,21 +58,11 @@ const DetailView = async ({ params }) => {
           {breed.breed_group}
         </h3>
       </div>
-      <ul className="flex gap-2 text-xs font-light text-[#6B8B42] my-2 bg-[#ACD7FF] rounded-full justify-center py-2">
-        {breed.temperament}
-        {/* <li className="rounded-full bg-[#ACD7FF] px-3 py-2">
-          Confident
-        </li>
-        <li className="rounded-full bg-[#EDA8B3] px-3 py-2">
-          Alert
-        </li>
-        <li className="rounded-full bg-[#C5E59C] px-3 py-2">
-          Playful
-        </li>
-        <li className="rounded-full bg-[#F1E689] px-3 py-2 text-[#978C2F]">
-          Loyal
-        </li> */}
-      </ul>
+      <div className="flex">
+        <Temperement
+          tempStr={breed.temperament}
+        ></Temperement>
+      </div>
       <dl className="text-[#333333] my-5">
         <dt className="text-xs opacity-50 font-medium">
           Breed Description

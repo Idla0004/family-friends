@@ -11,7 +11,7 @@ const DogBreed = ({
 }) => {
   return (
     <div className="bg-white shadow-sm rounded-2xl mb-3 w-fit pb-1">
-      <div className="relative">
+      <div className="relative cursor-pointer">
         <FavoriteElement
           id={id}
           breedName={breedName.name}
@@ -25,15 +25,15 @@ const DogBreed = ({
           height={114}
           className="rounded-2xl object-cover aspect-3/2"
         />
+        <div className="m-3">
+          <h3 className="text-[#333333] text-base font-bold mb-1">
+            {breedGroup}
+          </h3>
+          <p className="text-[#333333] opacity-40 text-xs w-30">
+            {origin}
+          </p>
+        </div>
       </Link>
-      <div className="m-3">
-        <h3 className="text-[#333333] text-base font-bold mb-1">
-          {breedGroup}
-        </h3>
-        <p className="text-[#333333] opacity-40 text-xs w-30">
-          {origin}
-        </p>
-      </div>
     </div>
   );
 };
