@@ -81,7 +81,7 @@ const DetailView = async ({ params }) => {
           {breed.description}
         </dd>
       </dl>
-      <dl>
+      <dl className="text-[#333333]">
         <dt className="text-xs opacity-50 font-medium">
           Breed History
         </dt>

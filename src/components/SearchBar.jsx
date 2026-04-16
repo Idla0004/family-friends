@@ -13,7 +13,7 @@ const SearchBar = () => {
       <input
         type="search"
         name="query"
-        className="border text-[#CACACD] rounded-full px-3 py-2"
+        className="border text-[#CACACD] rounded-full px-3 py-2 outline-none focus:border-[#F2968F]"
         placeholder="Search breeds"
       />
     </form>

@@ -5,7 +5,7 @@ import SingleView from "./singleview";
 import BreedList from "../components/BreedList";
 import { Suspense } from "react";
 
-export default function Home() {
+export default function Home({ searchParams }) {
   return (
     <section className="grid grid-cols-[repeat(auto-fill.minmax(250px,1fr))] gap-4 justify-center">
       <SearchBar />
@@ -13,7 +13,9 @@ export default function Home() {
         <Suspense
           fallback={<div>Loading dogs..</div>}
         >
-          <BreedList />
+          <BreedList
+            searchParams={searchParams}
+          />
         </Suspense>
       </section>
     </section>
